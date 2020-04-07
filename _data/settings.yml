@@ -13,6 +13,8 @@ menu:
         link: /blog/projects/microbam
       - name: OurLegacy
         link: /blog/projects/ourlegacy
+  - name: Posts
+    link: /blog/
   - name: Tags
     link: /blog/tags
   - name: About
