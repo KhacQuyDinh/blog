@@ -93,9 +93,9 @@ oc cluster up
 
 <p>Open browser and to to https://YOUR_IP_ADDRESS:8443/ and login with user/pwd : developer/developer</p>
 
-<a href="/assets/images/{{page.id}}/logged.png"> <img
+<a href="/blog/assets/images/{{page.id}}/logged.png"> <img
 	class="center-block img-responsive"
-	src="/assets/images/{{page.id}}/logged.png" alt="openshift login page"/></a>
+	src="/blog/assets/images/{{page.id}}/logged.png" alt="openshift login page"/></a>
 
 <h2>Deploy sample application</h2>
 <p>In a shell log in as admin and add the Java S2I (source to image) image streams to the openshift project.
@@ -127,24 +127,24 @@ oc create https://raw.githubusercontent.com/alainpham/rest-service/master/opensh
 <p>Go to My Project and Click on add to project</p>
 <p>Add to project from template and select the previously added rest-service.</p>
 
-<a href="/assets/images/{{page.id}}/addApp.png"> <img
+<a href="/blog/assets/images/{{page.id}}/addApp.png"> <img
 	class="center-block img-responsive"
-	src="/assets/images/{{page.id}}/addApp.png" alt="openshift add application"/></a>
+	src="/blog/assets/images/{{page.id}}/addApp.png" alt="openshift add application"/></a>
 <p>The template allows you ton change configurations before creating the different objects on the openshift cluster (i.e. BuildConfig, DeploymentConfig, Services, Routes ..)</p>
 <p>
 The source is cloned from the git repository and built using the Source2Image method.
 	Note that this is a Java project and all dependencies for the maven build needs to be downloaded. If you have an existing nexus or other maven repo you can configure it in the Maven Mirror Url.
 This could accelerate build time.
 </p>
-<a href="/assets/images/{{page.id}}/fillTemplate.png"> <img
+<a href="/blog/assets/images/{{page.id}}/fillTemplate.png"> <img
 	class="center-block img-responsive"
-	src="/assets/images/{{page.id}}/fillTemplate.png" alt="openshift app template"/></a>
+	src="/blog/assets/images/{{page.id}}/fillTemplate.png" alt="openshift app template"/></a>
 
 <p>Click on create and wait for the build and deployments to occur.</p>
 
-<a href="/assets/images/{{page.id}}/deployed.png"> <img
+<a href="/blog/assets/images/{{page.id}}/deployed.png"> <img
 	class="center-block img-responsive"
-	src="/assets/images/{{page.id}}/deployed.png" alt="openshift deployed apps"/></a>
+	src="/blog/assets/images/{{page.id}}/deployed.png" alt="openshift deployed apps"/></a>
 
 
 <p>Test by calling service.</p>
@@ -156,13 +156,13 @@ This could accelerate build time.
 
 <p>You can now also access infos about your running pods and access JMX methods and data through the Java Console</p>
 
-<a href="/assets/images/{{page.id}}/podInfo.png"> <img
+<a href="/blog/assets/images/{{page.id}}/podInfo.png"> <img
 	class="center-block img-responsive"
-	src="/assets/images/{{page.id}}/podInfo.png" alt="openshift pod information"/></a>
+	src="/blog/assets/images/{{page.id}}/podInfo.png" alt="openshift pod information"/></a>
 
-	<a href="/assets/images/{{page.id}}/javaconsole.png"> <img
+	<a href="/blog/assets/images/{{page.id}}/javaconsole.png"> <img
 		class="center-block img-responsive"
-		src="/assets/images/{{page.id}}/javaconsole.png" alt="java console"/></a>
+		src="/blog/assets/images/{{page.id}}/javaconsole.png" alt="java console"/></a>
 
 <p>Thanks for reading</p>
 
