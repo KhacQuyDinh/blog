@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tags
-permalink: /blog/tags
+permalink: /tags
 ---
 
 {% comment%}
@@ -42,7 +42,7 @@ Here we generate all the tags.
   {% for post in site.posts %}
   {% if post.tags contains tag %}
   <li>
-      <a href="{{ post.url }}">
+      <a href="{{ post.url | prepend: site.baseurl }}">
         {{ post.title }}
       </a>
   </li>

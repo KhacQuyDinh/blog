@@ -1,24 +1,24 @@
 # Change 'comments' to true for Disqus comments
 disqus:
   comments: true
-  disqus_shortname: 'apham'
+  disqus_shortname: 'khacquy'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
-google-ID: 'UA-91332049-1'
+google-ID: ''
 
 menu: 
   - name: Featured Projects
     submenu:
       - name: MicroBam
-        link: /blog/projects/microbam
+        link: /projects/microbam
       - name: OurLegacy
-        link: /blog/projects/ourlegacy
+        link: /projects/ourlegacy
   - name: Posts
-    link: /blog/
+    link: /
   - name: Tags
-    link: /blog/tags
+    link: /tags
   - name: About
-    link: /blog/about
+    link: /about
   - name: Follow me
     submenu:
       - name: GitHub
