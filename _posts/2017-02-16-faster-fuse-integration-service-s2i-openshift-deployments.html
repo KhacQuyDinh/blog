@@ -42,9 +42,9 @@ we can setup a Nexus server that will proxy these repositories and store already
 Here we will show how to setup a local standalone Nexus2 repository
 </p>
 
-<a href="/blog/assets/images{{page.id}}/nexus_s2i.png"> <img
+<a href="/blog/assets/images/posts{{page.id}}/nexus_s2i.png"> <img
 	class="center-block img-responsive"
-	src="/blog/assets/images{{page.id}}/nexus_s2i.png" alt="nexus s2i architecture"/></a>
+	src="/blog/assets/images/posts{{page.id}}/nexus_s2i.png" alt="nexus s2i architecture"/></a>
 
 <h3>Download Nexus 2 OSS and run it</h3>
 <p>
@@ -66,9 +66,9 @@ Unzip it and run it :
 http://localhost:8081/nexus
 </pre>
 <p>
-<a href="/blog/assets/images{{page.id}}/login_nexus.png"> <img
+<a href="/blog/assets/images/posts{{page.id}}/login_nexus.png"> <img
 	class="center-block img-responsive"
-	src="/blog/assets/images{{page.id}}/login_nexus.png" alt="nexus login page"/></a>
+	src="/blog/assets/images/posts{{page.id}}/login_nexus.png" alt="nexus login page"/></a>
 </p>
 <p>
 Click on Repositories and add 3 new proxy repositories
@@ -87,17 +87,17 @@ Click on Repositories and add 3 new proxy repositories
 
 
 <p>
-<a href="/blog/assets/images{{page.id}}/nexus_proxy_repo.png"> <img
+<a href="/blog/assets/images/posts{{page.id}}/nexus_proxy_repo.png"> <img
 	class="center-block img-responsive"
-	src="/blog/assets/images{{page.id}}/nexus_proxy_repo.png" alt="setup nexus proxy repos"/></a>
+	src="/blog/assets/images/posts{{page.id}}/nexus_proxy_repo.png" alt="setup nexus proxy repos"/></a>
 </p>
 
 <h3>Setup public group for all proxy repositories</h3>
 <p>Select the public group, add all the created proxy repositories and maven central.</p>
 <p>
-<a href="/blog/assets/images{{page.id}}/nexus_public_group.png"> <img
+<a href="/blog/assets/images/posts{{page.id}}/nexus_public_group.png"> <img
 	class="center-block img-responsive"
-	src="/blog/assets/images{{page.id}}/nexus_public_group.png" alt="setup nexus public group"/></a>
+	src="/blog/assets/images/posts{{page.id}}/nexus_public_group.png" alt="setup nexus public group"/></a>
 </p>
 
 <p>
@@ -455,9 +455,9 @@ oc create -f solution.yml
 oc create oc new-app springboot-rest
 </pre>
 
-<a href="/blog/assets/images{{page.id}}/faster_build.png"> <img
+<a href="/blog/assets/images/posts{{page.id}}/faster_build.png"> <img
 	class="center-block img-responsive"
-	src="/blog/assets/images{{page.id}}/faster_build.png" alt="openshift s2i faster build times"/></a>
+	src="/blog/assets/images/posts{{page.id}}/faster_build.png" alt="openshift s2i faster build times"/></a>
 
 <p>Test your service at the following url</p>
 <pre>
