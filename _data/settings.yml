@@ -10,9 +10,9 @@ menu:
   - name: Featured Projects
     submenu:
       - name: MicroBam
-        link: /projects/microbam
+        link: /blog/projects/microbam
       - name: OurLegacy
-        link: /projects/ourlegacy
+        link: /blog/projects/ourlegacy
   - name: Posts
     link: /
   - name: Tags
