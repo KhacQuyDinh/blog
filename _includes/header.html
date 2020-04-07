@@ -25,7 +25,7 @@
 							<ul class="dropdown-menu">
 								{% for subitem in item.submenu %}
 									<li>
-										<a href="{{subitem.link | prepend: site.baseurl }}">
+										<a href="{{subitem.link }}" target="_blank">
 											{% if subitem.icon %}
 											<i class="fa fa-inverse fa-{{subitem.icon}} fa-2x"></i>
 											{% endif %}
