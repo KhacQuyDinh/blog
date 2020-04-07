@@ -18,7 +18,7 @@ name: KhacQuy Blog
 description: 
   This is a blog of someone passionate about technology who wants to share some of the things he knows
   about Application Development, Integration, Cloud, Big Data and Digital Transformation
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "blog" # the subpath of your site, e.g. /blog
 
 # jekyll-paginate configuration
 paginate: 10
