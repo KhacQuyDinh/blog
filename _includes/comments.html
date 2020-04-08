@@ -1,6 +1,6 @@
 <script>
-const GH_API_URL = 'https://api.github.com/repos/khacquydinh/khacquydinh.github.com/issues/{{ page.comments_id }}/comments?client_id={{ site.data.settings.gh_api.ci }}&client_secret={{ site.data.settings.gh_api.cs }}';
-
+const GH_API_URL = 'https://api.github.com/repos/khacquydinh/blog/issues{{ page.comments_id }}/comments?client_id={{ site.data.settings.gh_api.ci }}&client_secret={{ site.data.settings.gh_api.cs }}';
+// alert(GH_API_URL)
 let request = new XMLHttpRequest();
 request.open( 'GET', GH_API_URL, true );
 request.onload = function() {
@@ -27,11 +27,14 @@ function createCommentEl( response ) {
 	let userAvatar = document.createElement( 'img' );
 	userAvatar.classList.add( 'avatar' );
 	userAvatar.setAttribute( 'src', response.user.avatar_url );
+	userAvatar.setAttribute( 'width', '30px' );
+	userAvatar.setAttribute( 'height', '30px' );
 
 	user.appendChild( userAvatar );
 
 	let commentLink = document.createElement( 'a' );
 	commentLink.setAttribute( 'href', response.html_url );
+	commentLink.setAttribute( 'target', '_blank' );
 	commentLink.classList.add( 'comment-url' );
 	commentLink.innerHTML = '#' + response.id + ' - ' + response.created_at;
 
@@ -43,6 +46,7 @@ function createCommentEl( response ) {
 	comment.setAttribute( 'data-created', response.created_at );
 	comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
 	comment.setAttribute( 'data-user-url', response.user.url );
+	comment.setAttribute( 'style', 'font-style: italic;' );
 
 	comment.appendChild( user );
 	comment.appendChild( commentContents );
@@ -56,8 +60,8 @@ request.send();
 <hr>
 
 <div class="github-comments">
-	<h2>Comments</h2>
+	<p style="font-size: 25px; font-weight: bold;">Comments</h2>
 	<ul id="gh-comments-list"></ul>
-	<p id="no-comments-found">No comments found for this article. Comments posted before 2019-09-15 are no longer available due to a system migration since I no longer use Disqus for comments.</p>
-	<p id="leave-a-comment">Join the discussion for this article on <a href="https://github.com/khacquydinh/khacquydinh.github.com/issues/{{ page.comments_id }}">this ticket</a>. Comments appear on this page insteantly.</p>
+	<p id="no-comments-found" style="display: none;">No comments found for this article. Comments posted before 2019-09-15 are no longer available due to a system migration since I no longer use Disqus for comments.</p>
+	<p id="leave-a-comment">Join the discussion for this article on <a href="https://github.com/khacquydinh/blog/issues{{ page.comments_id }}" target="_blank">this ticket</a>. Comments appear on this page insteantly.</p>
 </div>

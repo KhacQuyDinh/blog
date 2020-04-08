@@ -1,7 +1,7 @@
 # Change 'comments' to true for Disqus comments
 disqus:
   comments: true
-  disqus_shortname: 'khacquydinh'
+  disqus_shortname: 'https-khacquydinh-github-io-blog' #get when register disqus
 
 gh_api:
   ci: 'fcccb2e14742ebf271b0'
