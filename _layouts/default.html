@@ -49,6 +49,9 @@
 	{% endif %}
 
 	{% include disqus.html %}
+	{% if page.comments_id %}
+		{% include comments.html %}
+	{% endif %}
 	</div>
 	{% include footer.html %}
 	{% include analytics.html %}
