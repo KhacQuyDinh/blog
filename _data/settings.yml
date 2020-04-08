@@ -4,7 +4,7 @@ disqus:
   disqus_shortname: 'khacquy'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
-google-ID: ''
+google-ID: 'UA-163128018'
 
 menu: 
   - name: Featured Projects
