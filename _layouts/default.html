@@ -37,7 +37,7 @@
 			  {% for tag in page.tags %}
 			  {% if allpost.tags contains tag and allpost.id != page.id %}
 			  <li>
-			      <a href="{{ allpost.url | prepend: site.baseurl }}">
+			      <a href="{{ allpost.url | relative_url }}">
 			        {{ allpost.title }}
 			      </a>
 			  </li>

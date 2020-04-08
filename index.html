@@ -8,7 +8,7 @@ comments: true
 <!-- Pagination links -->
 <div >
 	{% if paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" >
+		<a href="{{ paginator.previous_page_path | relative_url }}" >
 		Previous
 		</a>
 	{% else %}
@@ -18,7 +18,7 @@ comments: true
 		Page: {{ paginator.page }} of {{ paginator.total_pages }}
 	</span> | 
 	{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" >Next</a>
+		<a href="{{ paginator.next_page_path | relative_url }}" >Next</a>
 	{% else %}
 		<span >Next</span>
 	{% endif %}
@@ -27,7 +27,7 @@ comments: true
 <div class="list-group">
 	{% for post in paginator.posts %} 
 	<div class="list-group-item">
-	<a href="{{ post.url | prepend: site.baseurl }}">
+	<a href="{{ post.url | relative_url }}">
 		<h4 class="list-group-item-heading">{{ post.title }}</h4>
 		<h6 class="list-group-item-heading">{{ post.published | date: '%B %d,
 			%Y' }} | (Last Update : {{ post.date | date: '%B %d, %Y' }})</h6></a>
@@ -41,7 +41,7 @@ comments: true
 			src="/blog/assets/images{{post.id}}/top.jpg" class="img-responsive">
 		{% endif %}
 		<p>{{ post.excerpt | strip_html}}</p>
-		<a href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+		<a href="{{ post.url | relative_url }}">Read more...</a>
 
 	</div>
 	{% endfor %}
@@ -50,7 +50,7 @@ comments: true
 <!-- Pagination links -->
 <div >
 {% if paginator.previous_page %}
-	<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" >
+	<a href="{{ paginator.previous_page_path | relative_url }}" >
 	Previous
 	</a>
 {% else %}
@@ -60,7 +60,7 @@ comments: true
 	Page: {{ paginator.page }} of {{ paginator.total_pages }}
 </span> | 
 {% if paginator.next_page %}
-	<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" >Next</a>
+	<a href="{{ paginator.next_page_path | relative_url }}" >Next</a>
 {% else %}
 	<span >Next</span>
 {% endif %}

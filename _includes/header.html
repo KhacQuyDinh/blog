@@ -8,7 +8,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{ prepend: site.baseurl }}"> <i class="fa fa-barcode"></i>
+				<a class="navbar-brand" href="{{ relative_url }}"> <i class="fa fa-barcode"></i>
 				</a>
 			</div>
 			<div id="navbar-collapse-menu" class="collapse navbar-collapse">
@@ -24,19 +24,30 @@
 							</a>
 							<ul class="dropdown-menu">
 								{% for subitem in item.submenu %}
+									{% if subitem.name == "Facebook" %}
 									<li>
-										<a href="{{subitem.link }}" target="_blank">
+										<a href="{{subitem.link}}" target="_blank">
 											{% if subitem.icon %}
 											<i class="fa fa-inverse fa-{{subitem.icon}} fa-2x"></i>
 											{% endif %}
 											{{subitem.name}}
 										</a>
 									</li>
+									{% else %}
+									<li>
+										<a href="{{subitem.link | relative_url}}">
+											{% if subitem.icon %}
+											<i class="fa fa-inverse fa-{{subitem.icon}} fa-2x"></i>
+											{% endif %}
+											{{subitem.name}}
+										</a>
+									</li>
+									{% endif %}
 								{% endfor %}
 								</ul>
 							</li>
 						{% else %}
-							<li><a href="{{item.link | prepend: site.baseurl }}">{{item.name}}</a></li>
+							<li><a href="{{item.link | relative_url }}">{{item.name}}</a></li>
 						{% endif %}
 					{% endfor %}
 				</ul>
