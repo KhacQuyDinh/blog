@@ -1,6 +1,6 @@
 html {
 	position: relative;
-	min-height: 100%;
+	min-height: 100%;		
 }
 
 body {
@@ -8,8 +8,15 @@ body {
 	margin-bottom: 8em;
 	padding-top: 4.5em;
 	counter-reset: h1counter;
-	
+	max-width: 100%;
+	width: 100%;
+	word-break: break-word;
+	text-align: justify; 
+	text-justify: inter-word;	
 }
+
+head {
+}	
 
 h1 {
 	counter-reset: h2counter;
@@ -55,7 +62,7 @@ h3:before {
 	/* Set the fixed height of the footer here */
 	height: 8em;
 	background-color: black;
-	bottom: 0;
+	bottom: 0;	
 }
 
 .footer-links {

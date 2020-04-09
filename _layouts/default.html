@@ -13,18 +13,22 @@
 			<a class="label label-default" href="/blog/tags/#{{ tag | slugify }}">{{ tag }}</a>
 		{% endfor %}
     </p>
-	{%if page.github %}
-	<p>
-    	<a href="{{ page.github }}" class="btn btn-default">
+	{%if page.github %}	
+	<p>		
+		<a href="{{ page.github }}" class="btn btn-default" 
+		   style="width: 100%; overflow: hidden; text-overflow: ellipsis;">
 		    <i class="fa fa-github fa-2x"></i>  {{ page.github }}
-			</a>
+		</a>		
 	</p>
+
 	{% endif %}
 	<hr>
 	<h1>Abstract</h1>
 	{% endif %}
 
-	{{ content }}
+	<div>
+		{{ content }}
+	</div>
 
 
 	{% if page.id %}
